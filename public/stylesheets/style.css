@@ -1,0 +1,873 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+form {
+}
+
+input, textarea {
+	padding: 2px 5px;
+	font: normal 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	margin-top: 1.5em;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+p, ul, ol {
+	margin-top: 1.5em;
+	line-height: 160%;
+}
+
+ul, ol {
+	margin-left: 3em;
+}
+
+blockquote {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+a {
+	color: #108317;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #3760BF;
+}
+
+a img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+img.right {
+	float: right;
+	margin: 0 0 0 20px;
+}
+
+hr {
+	display: none;
+}
+label{
+	background: green;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	margin: 10px, 10px, 0px, 10px;
+	color: yellow;
+}
+/* Main Page div sections */
+.main{
+	width: 438px;
+	height: 400px;
+}
+.top-left{
+
+	top: 0px;
+	left: 0px;
+}
+.small{
+	width: 200px;
+	height: 200px;
+	
+}
+.bottom-right{
+	bottom: 0px;
+	right: 0px;
+}
+.top-right{
+	top: 0px;
+	right: 0px;
+}
+.bottom-left{
+	bottom: 0px;
+	left: 0px;
+}
+
+/*	comment section */
+.comments {
+	padding-left: 20px;
+	background: url(../images/img07.gif) no-repeat left center;
+}
+
+/* Header */
+
+#header {
+	width: 778px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+#header h1, #header h2 {
+	margin: 0;
+	letter-spacing: -0.05em;
+	text-transform: lowercase;
+	font-weight: normal;
+}
+
+#header h1 {
+	float: left;
+	padding-top: 40px;
+	font-size: 4em;
+}
+
+#header h1 a {
+	text-decoration: none;
+}
+
+#header h2 {
+	float: left;
+	padding: 67px 0 0 8px;
+	font-size: 1.1em;
+	font-style: italic;
+	color: #83FF91;
+}
+
+/* Menu */
+
+#menu {
+	background: #83FF91;
+	text-align: right;
+	width: 778px;
+	height: 40px;
+	margin: 0 auto;
+	border: 1px solid #f5bc0b;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: inline;
+	float: left;
+	height: 28px;
+	padding: 12px 20px 0 20px;
+	background: url(../images/img03_new.gif) no-repeat;
+	font-weight: bold;
+	color: ##4c1932;
+}
+
+#menu a {
+	text-decoration: none;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+}
+
+#menu .first a {
+	background: none;
+}
+
+/* Profile Sub Menu */
+
+#profile_menu {
+	background: #83FF91;
+	text-align: right;
+	height: 40px;
+	margin: 0 auto;
+	border: 1px solid #f5bc0b;
+}
+
+#profile_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#profile_menu li {
+	display: inline;
+}
+
+#profile_menu a {
+	float: left;
+	height: 28px;
+	padding: 12px 20px 0 20px;
+	background: url(../images/img03_new.gif) no-repeat;
+	text-decoration: none;
+	font-weight: bold;
+	color: ##4c1932;
+}
+
+#profile_menu a:hover {
+	text-decoration: underline;
+}
+
+#profile_menu .first a {
+	background: none;
+}
+
+
+/* Page */
+
+#page {
+
+	width: 778px;
+	margin: 0 auto;
+}
+/* Sub-menu */
+
+#submenu {
+	width: 778px;
+	margin: 0 auto;
+
+}
+/* Notice-able change in background colours */
+#bright{
+
+	width: 200px;
+	height: auto;
+	padding-left: 20px;
+	background: #f5bc0b;
+	border: 10px solid #108317;
+}
+/* Post */
+
+.post {
+}
+
+.post .title {
+	margin: 0;
+}
+
+.post .title a {
+	text-decoration: none;
+}
+
+.post .byline {
+	margin: 0 0 30px 0;
+	line-height: normal;
+}
+
+.post .entry {
+}
+
+.post .meta {
+	clear: both;
+}
+
+.post .meta a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.post .meta a:hover {
+	text-decoration: underline;
+}
+
+.post .meta .comments {
+	padding-left: 20px;
+	background: url(../images/img07.gif) no-repeat left center;
+}
+
+.post .meta .permalink {
+	padding-left: 20px;
+	background: url(../images/img08.gif) no-repeat left center;
+}
+
+/* Latest Post */
+
+#latest-post {
+	background: #fff;
+	width: 778px;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+}
+
+#latest-post .byline {
+	margin: 0 0 20px 0;
+	padding: 0;
+	text-align: center;
+	font-size: .9em;
+	font-weight: bold;
+	color: #3760BF;
+}
+
+#latest-post .byline span {
+	padding: 0 0 0 30px;
+	background: url(../images/img04.gif) no-repeat;
+}
+
+#latest-post .byline a {
+	padding: 0 30px 0 0;
+	background: url(../images/img05.gif) no-repeat right top;
+	text-decoration: none;
+}
+
+#latest-post .byline a:hover {
+	text-decoration: underline;
+}
+
+/* Recent Posts */
+
+#recent-posts {
+	width: 778px;
+	margin: 0 auto;
+	background: url(../images/img09.gif) no-repeat;
+}
+
+#recent-posts h2 {
+	height: 18px;
+	margin: 0;
+	padding-top: 2px;
+	background: url(../images/img10.gif) no-repeat right top;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	font-size: .9em;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#recent-posts h3 {
+	font-size: 1.4em;
+}
+
+#recent-posts ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#recent-posts li {
+	float: left;
+	width: 246px;
+	padding-left: 20px;
+}
+
+#recent-posts li.first {
+	padding: 0;
+}
+
+/* Sidebar */
+
+#sidebar {
+	width: 778px;
+	margin: 0 auto;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	float: left;
+	width: 255px;
+	background: url(../images/img09.gif) no-repeat;
+}
+
+#sidebar li ul {
+	padding-left: 20px;
+}
+
+#sidebar li li {
+	float: none;
+	width: auto;
+	padding: 0;
+	background: none;
+}
+
+#sidebar h2 {
+	height: 19px;
+	margin: 0 0 20px 0;
+	padding-top: 1px;
+	background: url(../images/img10.gif) no-repeat right top;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	font-size: .9em;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#sidebar p {
+	margin: 0 0 20px 20px;
+	padding-top: 1px;
+	text-align: left;
+	letter-spacing: .5em;
+	font-size: .95em;
+	color: #000000;
+}
+
+/* Search */
+
+#search {
+	text-align: center;
+}
+
+#search #s {
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+/* Calendar */
+
+#calendar {
+}
+
+#calendar table, #calendar caption {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#calendar caption {
+	font-weight: bold;
+}
+
+#calendar a {
+	font-weight: bold;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	margin: 0 auto;
+	padding: 20px 0;
+	background: url(../images/img11_new.gif) repeat-x;
+	text-align: center;
+}
+
+#footer p {
+	margin: 0;
+	font-size: .8em;
+	color: #666666;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
+
+.nube1 {font-size: 1.0em;}
+.nube2 {font-size: 1.2em;}
+.nube3 {font-size: 1.4em;}
+.nube4 {font-size: 1.6em;}
+.nube5 {font-size: 1.8em;}
+.nube6 {font-size: 2.0em;}
+
+/* Forum Tables */
+table {
+  width: 100%;
+  border: 1px solid #a1ff7f;
+  margin-bottom: 10px;
+}
+
+thead th {
+  background: #a1ff7f;
+  color: #2b541c;
+  text-align: left;
+  font-weight: normal;
+  padding: 4px 5px;
+}
+
+thead th a:link, thead th a:visited {
+  color: #e5006e;
+}
+
+thead .tcm {
+  text-align: center;
+}
+
+tbody {
+  background: #f1f1f1;
+}
+
+tbody td {
+  padding: 5px;
+  vertical-align: top;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+tbody .tci {
+  width: 10px !important;
+  border-right: 0;
+}
+
+tbody .tcm {
+  text-align: center;
+  background: #dedfdf;
+}
+
+.forums-index .tcm {
+	vertical-align: middle;
+}
+
+tbody .tcr {
+  border-right: 0;
+}
+
+tbody .tds {
+  border: 0;
+  padding: 10px;
+}
+
+.thread {
+  margin-bottom: 5px;
+}
+
+.thread td {
+  border: 0;
+}
+
+.thread .profile {
+  width: 24%;
+}
+
+.thread .body {
+  width: 76%;
+  line-height: 1.4em;
+  background: #dedfdf;
+}
+
+.thread .body p {
+  margin-top: 0;
+}
+
+.post-body, .post-body img {
+  overflow: hidden;
+}
+
+.thread dl {
+  margin: 0;
+}
+
+.thread dt {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.thread dd.rank {
+  font-weight: bold;
+}
+
+.thread dd.avatar {
+  margin: 8px 0 4px 0;
+}
+
+.thread .thr {
+  text-align: right;
+}
+
+.thread .links {
+  text-align: right;
+  color: #ccc;
+}
+
+.forums-index {
+  margin-bottom: 5px;
+}
+
+.forums-index .tcl {
+  width: 58%;
+}
+
+.forums-index .tcm {
+  width: 8%;
+}
+
+.forums-index .tcr {
+  width: 34%;
+  vertical-align: middle;
+}
+
+.forums-list th {
+  background: #d1d1d1;
+  color: #333;
+}
+
+.forums-admin ul ul {
+	margin-left: 15px;
+}
+
+.forums-admin ul ul li {
+	margin-bottom: 5px;
+}
+
+.forum-name {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.topics-index .tcm {
+  width: 7%;
+}
+
+.topics-index .tcr {
+  width: 27%;
+}
+
+.topics-index .tcf {
+    width: 14%;
+}
+/* Star Colours */
+.star-rating,  
+.star-rating a:hover,  
+.star-rating a:active,  
+.star-rating a:focus,  
+.star-rating .current-rating{  
+    background: url('/images/star_rating.gif') left -1000px repeat-x;  
+}  
+.star-rating{  
+    position: relative;  
+    width: 150px;  
+    height: 30px;  
+    overflow: hidden;  
+    list-style: none;  
+    margin: 0;  
+    padding: 0;  
+    background-position: top left;  
+}  
+.star-rating li{  
+    display: inline;  
+}  
+.star-rating a,  
+.star-rating .current-rating{  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    text-indent: -1000em;  
+    height: 30px;  
+    line-height: 30px;  
+    outline: none;  
+    overflow: hidden;  
+    border: none;  
+}  
+.star-rating a:hover,  
+.star-rating a:active,  
+.star-rating a:focus{  
+    background-position: center left;  
+}  
+.star-rating a.one-stars{  
+    width: 20%;  
+    z-index: 6;  
+}  
+.star-rating a.two-stars{  
+    width: 40%;  
+    z-index: 5;  
+}  
+.star-rating a.three-stars{  
+    width: 60%;  
+    z-index: 4;  
+}  
+.star-rating a.four-stars{  
+    width: 80%;  
+    z-index: 3;  
+}  
+.star-rating a.five-stars{  
+    width: 100%;  
+    z-index: 2;  
+}  
+.star-rating .current-rating{  
+    z-index: 1;  
+    background-position: bottom left;  
+}  
+.star-ratings-block {  
+    font-size: .75em;  
+    text-align: center;  
+    width: 100%;  
+}
+/*columns */
+#ltcolumn { 
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ width: 450px;
+ float: left;
+}
+#rtcolumn { 
+ float: right;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ width: 195px;
+}
+.edited {
+  margin-top: 15px !important;
+  font-style: italic;
+}
+#index-main { 
+ background: url(../images/woman_measuring_her_waist.jpg) no-repeat;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ width: 450px;
+ float: left;
+}
+#indent { 
+ margin: 0px 5px 5px 0px;
+ padding: 230px;
+ width: 700px;
+
+}
+#index-main h1
+ { 
+	padding: 0px 0px 0px 400px;
+	text-decoration: none;
+}
+#index-main a
+ { 
+	text-decoration: none;
+}
+/* Photos List Styles */
+.photo-list {
+  text-align: center;
+}
+
+.photo-list .photo {
+  float: left;
+  margin: 18px;
+}
+
+.photo-show {
+  text-align: center;
+}
+.photo-list .avatar{
+	border: 2px dashed red;
+}
+#avatar-border{
+	border: 2px solid red;
+}
+/* Product Class */
+.Product .ltcolumn { 
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ width: 450px;
+ float: left;
+}
+.Product .rtcolumn { 
+ float: right;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ width: 195px;
+}
+.Product ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.Product li {
+	float: left;
+	width: 246px;
+	padding-left: 20px;
+
+}
+
+.Product li.first {
+	padding: 10px;
+
+}
+.info-left {
+  float: left;
+  margin: 0 0 10px 0;
+  padding-left: 5px;
+  border-left: 1px solid #f1f1f1;
+}
+.info-right {
+  float: right;
+	text-align: right;
+	width: 200px;
+  margin: 0 0 10px 0;
+  padding-right: 5px;
+  border-right: 1px solid #f1f1f1;
+}
+/* Flash styling */
+.flash{
+	color: green;
+}

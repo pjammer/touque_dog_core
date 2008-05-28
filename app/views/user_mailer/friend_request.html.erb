@@ -1,0 +1,15 @@
+Hello there <%= @friend.login %>,
+
+You have a new Pretty by critty friend request from <%= @user.login %>.
+
+View <%= @user.login %>'s profile:
+<%= @user_url %>
+
+Please action one of the following:
+
+Accept their request : <%= @accept_url %>
+or
+Decline their request: <%= @decline_url %>
+
+Thanks,
+The folks from Pretty by Critty.

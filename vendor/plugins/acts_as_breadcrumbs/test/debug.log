@@ -1,0 +1,2792 @@
+# Logfile created on Tue May 01 18:10:58 -0400 2007 by /
+  [4;36;1mSQL (0.000804)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'web_pages': DROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.069362)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `parent_id` int(11) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumb` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'locations': DROP TABLE locations[0m
+
+  [4;36;1mSQL (0.084954)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'soldiers': DROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.144673)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005614)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.003144)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.044834)[0m   [0m CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.006171)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
+
+  [4;35;1mSQL (0.004062)[0m   [0mUPDATE schema_info SET version = 1[0m
+
+  [4;36;1mSQL (0.000548)[0m   [0;1mBEGIN[0m
+
+  [4;35;1mSQL (0.000565)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000651)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.173207)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.079915)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `parent_id` int(11) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumb` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.008925)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.058485)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.022076)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004608)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.048600)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.006984)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000509)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.025692)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.014534)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mSQL (0.001818)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000611)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.007778)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.056348)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `parent_id` int(11) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumb` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005518)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.005980)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005396)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004946)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005250)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.006255)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;36;1mSQL (0.000605)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000644)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.005668)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.095158)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumb` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005950)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004677)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005650)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.006408)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005603)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.027646)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000521)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.026707)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.014902)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mSQL (0.000808)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000611)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.035276)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.049564)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumb` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006303)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004708)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005236)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004778)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006457)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003923)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000545)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.007678)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005850)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mSQL (0.032177)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.002727)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006410)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.004682)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumb` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.245118)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004586)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005343)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004558)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006439)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003910)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000503)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006186)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.014223)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003886)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mSQL (0.000778)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000678)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.125018)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.005184)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005602)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.006267)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005204)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.006105)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.007680)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004013)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000961)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.008801)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005811)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002998)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Update (0.001530)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar&nbsp;&gt;&nbsp;Baz', `url` = 'bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002574)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.002322)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000616)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.009159)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.034433)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005299)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004592)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005495)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.006052)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006705)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.027381)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000569)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.007816)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005759)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003033)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Update (0.001588)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar&nbsp;&gt;&nbsp;Baz', `url` = 'bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002555)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.002061)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000625)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.030781)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.112457)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007399)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004790)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007296)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005549)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.035158)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005779)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000496)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.032801)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005529)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002712)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Update (0.001487)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar&nbsp;&gt;&nbsp;Baz', `url` = 'bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002497)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.018995)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000739)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.007507)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.068955)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.029768)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.005233)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005346)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004416)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.007478)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003928)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000538)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.008032)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.014172)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003029)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Update (0.001569)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar&nbsp;&gt;&nbsp;Baz', `url` = 'bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002515)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.002110)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000606)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.008704)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.496945)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005300)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004604)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006884)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004786)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005318)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005568)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000544)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.010226)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.014368)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002734)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Update (0.001461)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Baz', `url` = 'baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002605)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.003889)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000611)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.005866)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.107064)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.036859)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004612)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006695)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.006046)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005305)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004128)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000570)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006689)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005935)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002737)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Update (0.013574)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar&nbsp;&gt;&nbsp;Baz', `url` = 'bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.003502)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.001712)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000610)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.005900)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.151486)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.339435)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004510)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007238)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004729)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005479)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005684)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000643)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006392)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.016617)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.005506)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mSQL (0.000770)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000633)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.073381)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.006965)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.024167)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.008321)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.015678)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.007735)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006953)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004289)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000506)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.009608)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.011775)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002791)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.005188)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001508)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '', `url` = '' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.003353)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.006330)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000756)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.008971)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.035482)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005342)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.006007)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006784)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004785)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.007812)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005631)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000587)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006120)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.007651)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002795)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.003684)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+ROOT: 1
+SELF: 3
+ROOT: 1
+SELF: 3
+  [4;36;1mWebPage Update (0.001478)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '', `url` = '' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002607)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002075)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000616)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006313)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.040715)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005397)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004824)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005372)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004503)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.007436)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004007)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000948)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.008693)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.006478)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002825)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002781)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+ROOT: 1
+PARENT: 2
+SELF: 3
+ROOT: 1
+PARENT: 2
+SELF: 3
+  [4;36;1mWebPage Update (0.001634)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '', `url` = '' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002526)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002003)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000610)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.028612)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.065294)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005268)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004682)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.009496)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004951)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.026039)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005651)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000504)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.029740)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.004656)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002764)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.003542)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+ROOT: 1
+PARENT: 2
+SELF: 3
+ROOT: 1
+PARENT: 2
+SELF: 3
+  [4;36;1mWebPage Update (0.001517)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '', `url` = '' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002652)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.003451)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000664)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.008886)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.302357)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005539)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004898)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007684)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004497)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.028856)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004851)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000526)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.027050)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.027049)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002709)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002725)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+ROOT: 1
+PARENT: 2
+SELF: 3
+PARENT && PARENT NOT ROOT
+ROOT: 1
+PARENT: 2
+SELF: 3
+PARENT && PARENT NOT ROOT
+  [4;36;1mWebPage Update (0.001534)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '', `url` = '' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.004818)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002024)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.001173)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006349)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.029502)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005265)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.028744)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006438)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.006457)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005578)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004269)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000670)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.025859)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.006020)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002799)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.004162)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+ROOT: 1
+PARENT: 2
+SELF: 3
+(PARENT AND PARENT NOT ROOT) OR (INCLUDE ROOT AND SELF ISN'T PARENT)
+ROOT: 1
+PARENT: 2
+SELF: 3
+(PARENT AND PARENT NOT ROOT) OR (INCLUDE ROOT AND SELF ISN'T PARENT)
+  [4;36;1mWebPage Update (0.001471)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar', `url` = 'bar' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002563)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001992)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000638)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.029693)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.089989)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005477)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004433)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005481)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005593)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005702)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003955)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.002083)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006792)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.015806)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.005382)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002760)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+ROOT: 1
+PARENT: 2
+SELF: 3
+(PARENT AND PARENT NOT ROOT) OR (INCLUDE ROOT AND PARENT ISN'T ROOT)
+(SELF IS NOT ROOT) OR (INCLUDE ROOT AND SELF ISN'T ROOT)
+ROOT: 1
+PARENT: 2
+SELF: 3
+(PARENT AND PARENT NOT ROOT) OR (INCLUDE ROOT AND PARENT ISN'T ROOT)
+(SELF IS NOT ROOT) OR (INCLUDE ROOT AND SELF ISN'T ROOT)
+  [4;36;1mWebPage Update (0.001936)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Bar&nbsp;&gt;&nbsp;Baz', `url` = 'bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002600)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002307)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000770)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.052783)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.028847)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005254)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004759)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006494)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004526)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005255)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004877)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.001880)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.028698)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.025386)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003812)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002743)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001598)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '&nbsp;&gt;&nbsp;Baz', `url` = '/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.004045)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002216)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000950)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.459283)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.019758)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005392)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004676)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006318)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.007078)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.027105)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.006284)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000511)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.010718)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.002699)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002787)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002631)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001777)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002494)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002172)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000614)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.029119)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.107142)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006822)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004750)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007846)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004814)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005672)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003939)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000496)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.007877)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.022588)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.006123)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002664)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001521)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002586)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002200)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000634)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.005885)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.011552)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.164952)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004402)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005280)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.007716)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006001)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003878)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000477)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.010888)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.002672)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.004892)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002773)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.002509)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002541)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.011359)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.002147)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.005130)[0m   [0;1mSELECT * FROM locations WHERE (id != 3) ORDER BY locations.location_string[0m
+    [36;2mapp/models/location.rb:75:in `validate_parent'[0m
+  [4;35;1mLocation Load (0.002306)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+    [35;2mapp/models/location.rb:76:in `validate_parent'[0m
+    [35;2mapp/models/location.rb:76:in `delete_if'[0m
+    [35;2mapp/models/location.rb:76:in `validate_parent'[0m
+  [4;36;1mLocation Load (0.002162)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+    [36;2mapp/models/location.rb:77:in `validate_parent'[0m
+  [4;35;1mSQL (0.002309)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000639)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006373)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.083571)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005962)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004743)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.009055)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005036)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.048607)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004042)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;36;1mSQL (0.000610)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.024576)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.244570)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005196)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.006261)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006391)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005038)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005557)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.027061)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000574)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006963)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005598)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002895)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002870)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001530)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = '&nbsp;&gt;&nbsp;&nbsp;&gt;&nbsp;Baz', `url` = '//baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002591)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.004503)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000722)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.035220)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.041418)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005375)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004774)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006665)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.008692)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.024876)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004243)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000500)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006452)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.007798)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.004203)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002689)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001514)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002460)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.008199)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005011)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002916)[0m   [0;1mSELECT * FROM locations WHERE (id != 3) ORDER BY locations.location_string[0m
+    [36;2mapp/models/location.rb:75:in `validate_parent'[0m
+  [4;35;1mLocation Load (0.002246)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+    [35;2mapp/models/location.rb:76:in `validate_parent'[0m
+    [35;2mapp/models/location.rb:76:in `delete_if'[0m
+    [35;2mapp/models/location.rb:76:in `validate_parent'[0m
+  [4;36;1mLocation Load (0.002214)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+    [36;2mapp/models/location.rb:77:in `validate_parent'[0m
+  [4;35;1mSQL (0.001953)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000608)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.018989)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.069517)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006402)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.005074)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005334)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005012)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.026144)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005114)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000493)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.011538)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.002702)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002793)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.004049)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001680)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002478)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.005945)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.007065)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.004644)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000611)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006265)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.041186)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.040646)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.005015)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005394)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.051099)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005266)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004146)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000497)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006130)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.007261)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.045798)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002847)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001526)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002654)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.010830)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.002379)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002482)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000703)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.012116)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.060187)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007005)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004642)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005475)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004639)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.009919)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005604)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000555)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.007313)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.007878)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002728)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002839)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001562)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002549)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.006865)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005178)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002318)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002119)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001417)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM01', `parent_id` = 2, `name` = 'RM01' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002487)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002064)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000618)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006405)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.073305)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005275)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.007035)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006057)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005881)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006038)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005475)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000567)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.010466)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005656)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003073)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002637)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.002579)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002474)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.006878)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005452)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002325)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002122)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.002471)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002493)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSoldier Columns (0.034540)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.005175)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;36;1mSoldier Load (0.002270)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;35;1mSoldier Load (0.002158)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.003916)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001609)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002158)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;35;1mSQL (0.004283)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000624)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006180)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.083288)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.013394)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004674)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005707)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004584)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005267)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003907)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000494)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.027943)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.011513)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.004517)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002717)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001718)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.003663)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.006053)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.004940)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002215)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002168)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001437)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002418)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSoldier Columns (0.006016)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.006382)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;36;1mSoldier Load (0.002183)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;35;1mSoldier Load (0.002851)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.003713)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001431)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002217)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;35;1mSQL (0.002046)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000684)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.031724)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.141177)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006784)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004779)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007224)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005118)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.006080)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.006119)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000613)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006652)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.016978)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002827)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.003110)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mWebPage Update (0.004420)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.003208)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.008692)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.003850)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002212)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002296)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001385)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.004130)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSoldier Columns (0.009377)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.002263)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;36;1mSoldier Load (0.002255)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;35;1mSoldier Load (0.003819)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002266)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT true
+  [4;35;1mSoldier Update (0.002062)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002255)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;35;1mSQL (0.002140)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000614)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.008333)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.084929)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005599)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.006337)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005415)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.028739)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005240)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003965)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000483)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.008919)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.025645)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003098)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002681)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mWebPage Update (0.001518)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002588)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mLocation Columns (0.011344)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.002342)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.003467)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002303)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001556)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002557)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSoldier Columns (0.006737)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.015983)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;36;1mSoldier Load (0.002326)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;35;1mSoldier Load (0.002142)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002127)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001407)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002900)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;35;1mSQL (0.002213)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000612)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006271)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.091337)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005681)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004826)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007154)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004750)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005598)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003938)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000517)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.006799)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.046332)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002494)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.003857)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001478)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.003201)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.012624)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000619)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.007916)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.015151)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.004596)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002593)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mWebPage Update (0.001451)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002515)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001982)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000522)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002129)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;35;1mLocation Update (0.001454)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.004822)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mSQL (0.003468)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000554)[0m   [0;1mBEGIN[0m
+
+  [4;35;1mSoldier Columns (0.007423)[0m   [0mSHOW FIELDS FROM soldiers[0m
+  [4;36;1mSoldier Load (0.016512)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001607)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002326)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;35;1mSQL (0.001908)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000564)[0m   [0;1mBEGIN[0m
+
+  [4;35;1mSoldier Load (0.009604)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;36;1mSoldier Load (0.002280)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;35;1mSoldier Load (0.003847)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002312)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001414)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002083)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;35;1mSQL (0.004022)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000571)[0m   [0;1mBEGIN[0m
+
+  [4;35;1mWebPage Load (0.011402)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.007936)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.003535)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mWebPage Update (0.003182)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002507)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001915)[0m   [0;1mROLLBACK[0m
+
+  [4;36;1mSQL (0.000606)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.077295)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.005094)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.008155)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.022749)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005971)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004743)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.010346)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.001263)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000508)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.053541)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.015166)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.003036)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.004961)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001439)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002544)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.001993)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000583)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006524)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005581)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002619)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.003000)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mWebPage Update (0.001506)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002471)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.026857)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000589)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002191)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;35;1mLocation Update (0.001570)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.002580)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002259)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001459)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002812)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002345)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002309)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.002312)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002654)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mSQL (0.002076)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000577)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.019762)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.015547)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;36;1mSoldier Update (0.001417)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'President Tancredo', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002230)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.002231)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001367)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002298)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.003203)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002254)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001432)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002325)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.002495)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002267)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002255)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;36;1mSoldier Update (0.001464)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002271)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;36;1mSQL (0.002201)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000560)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.002514)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002261)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002218)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002226)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;36;1mSoldier Update (0.001393)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002151)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.001950)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000628)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.008155)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.002991)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.003009)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;35;1mWebPage Update (0.001524)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002550)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.001892)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000614)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.102617)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.007648)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005543)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.006385)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007385)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.004723)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005912)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.030313)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000525)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.009412)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.029859)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002367)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002326)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001498)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002470)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.004154)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000588)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006507)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005449)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002678)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002982)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mWebPage Update (0.001469)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002491)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002498)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000836)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002508)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;35;1mLocation Update (0.001383)[0m   [0mUPDATE locations SET `location_string` = '', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.002657)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002560)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001401)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002650)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002499)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002346)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mLocation Update (0.001422)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002621)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;36;1mSQL (0.002063)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000572)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.007550)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.014216)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;36;1mSoldier Update (0.001397)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.004066)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.006575)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001372)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002214)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.003287)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.003040)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;35;1mSoldier Update (0.001584)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002456)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.003354)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002292)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002194)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;36;1mSoldier Update (0.003529)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002347)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+INCLUDE ROOT false
+INCLUDE ROOT false
+INCLUDE ROOT false
+  [4;36;1mSQL (0.002417)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000574)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.014068)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002215)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002175)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002187)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+INCLUDE ROOT false
+  [4;36;1mSoldier Update (0.001397)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.003641)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.003401)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000589)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.002949)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.003162)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.003235)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+INCLUDE ROOT true
+INCLUDE ROOT true
+  [4;35;1mWebPage Update (0.001473)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002630)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.003497)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000650)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006506)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.139024)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006819)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004767)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007704)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005723)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005805)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004583)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000545)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.005982)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005173)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002359)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002561)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001461)[0m   [0;1mUPDATE locations SET `location_string` = 'RM03:HQ:FL01', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002512)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.019008)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000562)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.009063)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005634)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.003625)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.005986)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001478)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Baz&nbsp;&gt;&nbsp;Foo&nbsp;&gt;&nbsp;Bar', `url` = 'baz/foo/bar' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002480)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002006)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000554)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.003719)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Update (0.001410)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.002570)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.003272)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001403)[0m   [0;1mUPDATE locations SET `location_string` = 'FL01:HQ', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.003270)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002402)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002349)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001397)[0m   [0;1mUPDATE locations SET `location_string` = 'RM03:HQ:FL01', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002498)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002136)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000582)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.011407)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.017793)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001424)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002320)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.002168)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001377)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002334)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.002672)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002276)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001382)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002204)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.002389)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.004821)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002227)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001406)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002577)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.002285)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000622)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.005649)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002247)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002237)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002279)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001510)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002102)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.001932)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.003852)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.003133)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.003406)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.005115)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;35;1mWebPage Update (0.001498)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Baz&nbsp;&gt;&nbsp;Foo&nbsp;&gt;&nbsp;Bar', `url` = 'baz/foo/bar' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002608)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.002151)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000613)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.006401)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.073647)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005731)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004611)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007199)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005143)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.051699)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.001300)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000975)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.050445)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005498)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002447)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.003919)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001508)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002433)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.003701)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000579)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.007686)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005700)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002616)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.003013)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001532)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002531)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001886)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000592)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002369)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Update (0.001483)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.002574)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.004246)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001405)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002653)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002395)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002538)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001421)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002587)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002032)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000574)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.011858)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.006957)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001487)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002324)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.002242)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.002831)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002839)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.002229)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002218)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001399)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002358)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.002407)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002297)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.003742)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.003648)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002560)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.003769)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000638)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.002365)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002598)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.004049)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002256)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001464)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'President Tancredo > General Hailstone > Colonel Stanley', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002248)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.001978)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000620)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.009852)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.003493)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.003988)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;35;1mWebPage Update (0.001463)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002632)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.001910)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000686)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.008567)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.004902)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.067567)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.004893)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.005398)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005162)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.007493)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.003975)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000487)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.005770)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.008054)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002718)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.021840)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001554)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002859)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.001879)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000591)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.011022)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.002824)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002673)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002601)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001544)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002610)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001961)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000519)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002195)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Update (0.001424)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.002619)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002254)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001974)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002661)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002428)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.005450)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001546)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002867)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.003927)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000603)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.017932)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.006648)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001499)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002217)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.003191)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001405)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002287)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.002229)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002143)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.002877)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002304)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.002571)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002332)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002276)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001491)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002390)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.002151)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000590)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.002410)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002301)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.003755)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002277)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001421)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002208)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.001854)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000594)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.009724)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.010134)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.005555)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;35;1mWebPage Update (0.001668)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.004073)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.002160)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000665)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'nodes': DROP TABLE nodes[0m
+
+  [4;36;1mSQL (0.082902)[0m   [0;1mCREATE TABLE nodes (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.105945)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.251388)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.043101)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005508)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006389)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.006449)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005316)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005932)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000485)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.005736)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.020992)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002421)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002276)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001445)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002647)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.001964)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000566)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.008532)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005613)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002647)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.004300)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001528)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002444)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002181)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000602)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002547)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Update (0.001463)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.028037)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002415)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001616)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.005602)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.003100)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002447)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001371)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.003103)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002075)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000505)[0m   [0mBEGIN[0m
+
+  [4;36;1mSQL (0.000541)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000483)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.010920)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.011982)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001478)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002237)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.003117)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001420)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.004644)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.002283)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002196)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001397)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002252)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.002404)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002870)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002353)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001450)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002268)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.002168)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000597)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.009310)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002374)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002255)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002272)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001476)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002204)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.002418)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000581)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.002637)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.003236)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.003135)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;35;1mWebPage Update (0.001483)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002746)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.003491)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000615)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.277865)[0m   [0mDROP TABLE nodes[0m
+
+  [4;36;1mSQL (0.004980)[0m   [0;1mCREATE TABLE nodes (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.363177)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.007565)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.007895)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005378)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006471)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.005352)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.031187)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.004982)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000503)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.009777)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005201)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.003479)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002213)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.002307)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002428)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002540)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000553)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.006363)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.006740)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.004360)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002916)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001440)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.002455)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001908)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000582)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002541)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Update (0.001419)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.002564)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002635)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001387)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.003644)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002374)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002270)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001352)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002885)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002077)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000614)[0m   [0mBEGIN[0m
+
+  [4;36;1mNode Columns (0.011876)[0m   [0;1mSHOW FIELDS FROM nodes[0m
+  [4;35;1mNode Load (0.012703)[0m   [0mSELECT * FROM nodes WHERE (nodes.`id` = 3) [0m
+
+  [4;36;1mNode Load (0.002107)[0m   [0;1mSELECT * FROM nodes WHERE (nodes.`id` = 2) [0m
+
+  [4;35;1mNode Load (0.002151)[0m   [0mSELECT * FROM nodes WHERE (nodes.`id` = 1) [0m
+
+  [4;36;1mNode Update (0.001403)[0m   [0;1mUPDATE nodes SET `parent_id` = 2, `breadcrumbs` = 'Root:Level 1:Level 2', `name` = 'Level 2' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mNode Load (0.002144)[0m   [0mSELECT * FROM nodes WHERE (nodes.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002220)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000564)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.010584)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.010044)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001464)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002220)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.002208)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001376)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002295)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.002274)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002189)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.002963)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002332)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.002387)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002390)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.003875)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001421)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002340)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.005455)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000627)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.002530)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002835)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002411)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002868)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.002946)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002342)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.001955)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000582)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.002723)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.003045)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.002780)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;35;1mWebPage Update (0.001582)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.002487)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.001875)[0m   [0mROLLBACK[0m
+
+  [4;36;1mSQL (0.000605)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+  [4;35;1mSQL (0.008347)[0m   [0mDROP TABLE nodes[0m
+
+  [4;36;1mSQL (0.125189)[0m   [0;1mCREATE TABLE nodes (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.009762)[0m   [0mDROP TABLE locations[0m
+
+  [4;36;1mSQL (0.005068)[0m   [0;1mCREATE TABLE locations (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `location_string` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.008843)[0m   [0mDROP TABLE soldiers[0m
+
+  [4;36;1mSQL (0.005088)[0m   [0;1mCREATE TABLE soldiers (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `name` varchar(255) DEFAULT NULL, `chain_o_command` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.006327)[0m   [0mDROP TABLE web_pages[0m
+
+  [4;36;1mSQL (0.032607)[0m   [0;1mCREATE TABLE web_pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `slug` varchar(255) DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `breadcrumbs` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+    [35;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:138:in `initialize_schema_information'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'plugin_schema_info' already exists: CREATE TABLE plugin_schema_info 
+ (plugin_name varchar(255), version int(11))
+[0m
+    [36;2mvendor/plugins/engines/lib/engines/rails_extensions/migrations.rb:142:in `initialize_schema_information'[0m
+  [4;35;1mSQL (0.005221)[0m   [0mSHOW FIELDS FROM schema_info[0m
+
+  [4;36;1mSQL (0.005474)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+
+  [4;35;1mSQL (0.000505)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Columns (0.005783)[0m   [0;1mSHOW FIELDS FROM locations[0m
+  [4;35;1mLocation Load (0.005285)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.002369)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.003790)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001518)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.002447)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.001938)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000580)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Columns (0.009466)[0m   [0;1mSHOW FIELDS FROM web_pages[0m
+  [4;35;1mWebPage Load (0.005524)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;36;1mWebPage Load (0.002569)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;35;1mWebPage Load (0.002653)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;36;1mWebPage Update (0.001598)[0m   [0;1mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mWebPage Load (0.007428)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.002694)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000598)[0m   [0mBEGIN[0m
+
+  [4;36;1mLocation Load (0.002230)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Update (0.001493)[0m   [0mUPDATE locations SET `location_string` = 'HQ', `parent_id` = NULL, `name` = 'HQ' WHERE `id` = 1[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mLocation Load (0.003876)[0m   [0;1mSELECT * FROM locations WHERE (locations.parent_id = 1) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002437)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001429)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01', `parent_id` = 1, `name` = 'FL01' WHERE `id` = 2[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.004369)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 2) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Load (0.003522)[0m   [0;1mSELECT * FROM locations WHERE (locations.`id` = 2) ORDER BY locations.location_string[0m
+
+  [4;35;1mLocation Load (0.002390)[0m   [0mSELECT * FROM locations WHERE (locations.`id` = 1) ORDER BY locations.location_string[0m
+
+  [4;36;1mLocation Update (0.001315)[0m   [0;1mUPDATE locations SET `location_string` = 'HQ:FL01:RM03', `parent_id` = 2, `name` = 'RM03' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mLocation Load (0.004052)[0m   [0mSELECT * FROM locations WHERE (locations.parent_id = 3) ORDER BY locations.location_string[0m
+
+  [4;36;1mSQL (0.002080)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000635)[0m   [0mBEGIN[0m
+
+  [4;36;1mNode Columns (0.022003)[0m   [0;1mSHOW FIELDS FROM nodes[0m
+  [4;35;1mNode Load (0.002396)[0m   [0mSELECT * FROM nodes WHERE (nodes.`id` = 3) [0m
+
+  [4;36;1mNode Load (0.002242)[0m   [0;1mSELECT * FROM nodes WHERE (nodes.`id` = 2) [0m
+
+  [4;35;1mNode Load (0.002184)[0m   [0mSELECT * FROM nodes WHERE (nodes.`id` = 1) [0m
+
+  [4;36;1mNode Update (0.001501)[0m   [0;1mUPDATE nodes SET `parent_id` = 2, `breadcrumbs` = 'Root:Level 1:Level 2', `name` = 'Level 2' WHERE `id` = 3[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mNode Load (0.002261)[0m   [0mSELECT * FROM nodes WHERE (nodes.parent_id = 3) [0m
+
+  [4;36;1mSQL (0.001921)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000697)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Columns (0.022634)[0m   [0;1mSHOW FIELDS FROM soldiers[0m
+  [4;35;1mSoldier Load (0.002354)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001738)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = '', `parent_id` = NULL, `name` = 'President Tancredo' WHERE `id` = 1[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.003778)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 1) [0m
+
+  [4;36;1mSoldier Load (0.002668)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001493)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone', `parent_id` = 1, `name` = 'General Hailstone' WHERE `id` = 2[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002496)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 2) [0m
+
+  [4;35;1mSoldier Load (0.002207)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;36;1mSoldier Load (0.002215)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;35;1mSoldier Update (0.001387)[0m   [0mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley', `parent_id` = 2, `name` = 'Colonel Stanley' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mSoldier Load (0.002393)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.parent_id = 3) [0m
+
+  [4;35;1mSoldier Load (0.004097)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002672)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002199)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001338)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002306)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.002165)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.002106)[0m   [0mBEGIN[0m
+
+  [4;36;1mSoldier Load (0.008105)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 4) [0m
+
+  [4;35;1mSoldier Load (0.002703)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 3) [0m
+
+  [4;36;1mSoldier Load (0.002522)[0m   [0;1mSELECT * FROM soldiers WHERE (soldiers.`id` = 2) [0m
+
+  [4;35;1mSoldier Load (0.002611)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.`id` = 1) [0m
+
+  [4;36;1mSoldier Update (0.001473)[0m   [0;1mUPDATE soldiers SET `chain_o_command` = 'General Hailstone > Colonel Stanley > LTC Mueller', `parent_id` = 3, `name` = 'LTC Mueller' WHERE `id` = 4[0m
+    [36;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;35;1mSoldier Load (0.002206)[0m   [0mSELECT * FROM soldiers WHERE (soldiers.parent_id = 4) [0m
+
+  [4;36;1mSQL (0.002231)[0m   [0;1mROLLBACK[0m
+
+  [4;35;1mSQL (0.000639)[0m   [0mBEGIN[0m
+
+  [4;36;1mWebPage Load (0.011480)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 3) [0m
+
+  [4;35;1mWebPage Load (0.002709)[0m   [0mSELECT * FROM web_pages WHERE (web_pages.`id` = 2) [0m
+
+  [4;36;1mWebPage Load (0.002922)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.`id` = 1) [0m
+
+  [4;35;1mWebPage Update (0.001488)[0m   [0mUPDATE web_pages SET `title` = 'Baz', `slug` = 'baz', `parent_id` = 2, `breadcrumbs` = 'Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz', `url` = 'foo/bar/baz' WHERE `id` = 3[0m
+    [35;2mvendor/plugins/userstamp/lib/userstamp.rb:49:in `update'[0m
+  [4;36;1mWebPage Load (0.003349)[0m   [0;1mSELECT * FROM web_pages WHERE (web_pages.parent_id = 3) [0m
+
+  [4;35;1mSQL (0.001858)[0m   [0mROLLBACK[0m
+

@@ -1,0 +1,6 @@
+	<h2><%= titles %></h2>
+<ul>
+<% for post in posts %>
+<li class="recent-posts"><h3><%= link_to "#{post.title}", blog_post_path %></h3></li>
+<% end %>
+</ul>

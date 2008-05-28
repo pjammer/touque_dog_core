@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  forum_id: 1
+  user_id: 1
+  title: MyString
+  view: 1
+  messages_count: 1
+  last_post_id: 1
+  last_post_at: 2008-01-20 09:52:26
+  last_post_by: 1
+  private: false
+  locked: false
+  sticky: false
+
+two:
+  forum_id: 1
+  user_id: 1
+  title: MyString
+  view: 1
+  messages_count: 1
+  last_post_id: 1
+  last_post_at: 2008-01-20 09:52:26
+  last_post_by: 1
+  private: false
+  locked: false
+  sticky: false

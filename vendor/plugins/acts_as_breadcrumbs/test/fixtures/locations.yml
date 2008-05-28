@@ -1,0 +1,12 @@
+location_1:
+  id: 1
+  parent_id: NULL
+  name: 'HQ'
+location_2:
+  id: 2
+  parent_id: 1
+  name: 'FL01'
+location_3:
+  id: 3
+  parent_id: 2
+  name: 'RM03'

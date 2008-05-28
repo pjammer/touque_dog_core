@@ -1,0 +1,22 @@
+<h1>Editing prategory</h1>
+
+<%= error_messages_for :prategory %>
+
+<% form_for([:admin, @prategory]) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Parent</b><br />
+    <%= render(:partial => "select_prategories") %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [:admin, @prategory] %> |
+<%= link_to 'Back', admin_prategories_path %>

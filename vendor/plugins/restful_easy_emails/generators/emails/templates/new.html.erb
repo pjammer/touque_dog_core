@@ -1,0 +1,31 @@
+<h1>RESTful Eazy Messages</h1>
+<div class="" >
+<%= error_emails_for 'email' %>
+<%= rezm_menu -%>
+  <p></p>
+  <%= flash[:notice] %> 
+  <fieldset>
+    <legend>Send Message</legend>
+
+    <% form_for :email, :url => profile_emails_path do |form| %>
+      <p>
+        <label for="email_recepient" >Recipient:</label><br />
+        <%= form.text_field :recipient, :size => 40, :value => @email.recipient %>
+      </p>
+    
+      <p>
+        <label for="email_subject" >Subject:</label><br />
+        <%= form.text_field :subject, :size => 40 %>
+      </p>
+      
+      <p>
+        <label for="email_body" >Message:</label><br />
+        <%= form.text_area :body %>
+      </p>
+
+      <%= submit_tag "Send Message" %>
+
+    <% end %>
+  </fieldset>
+  
+</div>

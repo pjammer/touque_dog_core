@@ -1,0 +1,14 @@
+<% if current_user.is_friends_with? @user or @user == current_user %>
+  <h2><%= pluralize(@user.friends.size, "Friend") %></h2>
+<% @user.friends.each do |friend| %>
+  <%= link_to friend.login, :controller => :profile, :action =>"#{friend.login}" %><br />
+<% end %>
+<% else %>
+<p><%= link_to "Request friendship with #{@user.login}", :controller => "friendship", :action => "create", :id => @user.login, :confirm => "Send request to #{@user.login}?" %></p>
+<% end %>
+<% if @user == current_user %>
+  <h3>Pending Friends</h3>
+  <% @user.pending_friends_for_me.each do |friend| %>
+    <%= link_to friend.login, :controller => :profile, :action =>"#{friend.login}" %>&nbsp; <%= link_to "Accept?", :controller => "friendship", :action => "accept", :id => "#{friend.login}" %> | <%= link_to "No Way!", :controller => "friendship", :action => "decline", :id => "#{friend.login}" %><br />
+  <% end %>
+  <% end %>

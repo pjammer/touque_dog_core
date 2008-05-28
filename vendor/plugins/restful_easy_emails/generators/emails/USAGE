@@ -1,0 +1,1 @@
+./script/generate emails RENDERING_ENGINE(erb or haml)

@@ -1,0 +1,15 @@
+== MetaTagHelper
+
+Looted from Typo and Jeremy Voorhis.
+
+http://typosphere.org/
+
+http://www.jvoorhis.com/articles/2005/12/02/making-it-better
+
+Tests and plugin by Geoffrey Grosenbach.
+
+http://nubyonrails.com
+
+== Description
+
+Provides several tags for writing an XHTML doctype and meta tags.

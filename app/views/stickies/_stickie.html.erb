@@ -1,0 +1,11 @@
+<% form_for([@user, @stickie], :url => profile_sticky_path(@user.login, @stickie)) do |f| %>
+  <p>
+	
+    <b>What is it that you want to say?</b><br />
+    <%= f.text_area :body, :style => 'height: 150px; width: 150px;'%>
+  </p>
+	
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>

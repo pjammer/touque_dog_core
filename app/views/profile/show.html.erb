@@ -1,0 +1,35 @@
+<div id="ltcolumn">
+<h1>Home of <%= @user.login %> </h1>
+<div id='profile_menu'><%= render :partial => "menu" %></div>
+
+<p>User content here.</p>
+</div>
+<div id="rtcolumn">
+<div><%= avatar_for(@user) %></div><br />
+<% if me_or_friend? %>
+
+
+  <h1 class="comments">Stickies</h1><br />
+  	<!-- #1 -->
+  	<% unless @user.stickie.empty? %> 
+        <% @user.stickie.each do |comment| %>
+  	    <p><%= h comment.body %><br /><small>Posted on <%= h comment.created_at %> by <%=h comment.user.login  %></small>
+  	    </p>
+  	  <% end %>
+  	<% end %>
+
+  	<!-- #2 -->
+  	<div id='hide_it'>
+      	<h2 class="comments"><%= link_to_function 'Drop a Stickie?', "new Effect.Fold('hide_it');new Effect.BlindDown('show_it', {queue: 'end'})" %></h2>
+  </div>
+  <div id='show_it' style="display:none;">
+  <% if logged_in? %>
+  <%= render :partial => @stickie = @user.stickie.new, 
+     :locals => { :button_name => 'Create'}%><br />
+<%= render :partial => "contact_box" %>
+  <% else %>
+  <p> You aren't a friend of this person.  How did you even get here?</p>
+  <% end %>
+  </div>
+<% end %>
+</div>

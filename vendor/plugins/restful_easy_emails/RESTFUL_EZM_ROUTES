@@ -1,0 +1,36 @@
+# Add these names routes to your project's config/routes.rb
+map.resources :users do |user|
+  user.resources :emails,
+                 :collection => {:destroy_selected => :post,
+                                 :inbox            => :get,
+                                 :outbox           => :get,
+                                 :trashbin         => :get},
+                 :member     => {:reply => :get}
+end
+
+# Here is a list of all the route created by Restful_EZM. Rake routes was used to generate this
+
+                     inbox_profile_emails GET    /users/:user_id/emails/inbox                    {:controller=>"emails", :action=>"inbox"}
+           formatted_inbox_profile_emails GET    /users/:user_id/emails/inbox.:format            {:controller=>"emails", :action=>"inbox"}
+                    outbox_user_emails GET    /users/:user_id/emails/outbox                   {:controller=>"emails", :action=>"outbox"}
+          formatted_outbox_user_emails GET    /users/:user_id/emails/outbox.:format           {:controller=>"emails", :action=>"outbox"}
+                  trashbin_user_emails GET    /users/:user_id/emails/trashbin                 {:controller=>"emails", :action=>"trashbin"}
+        formatted_trashbin_user_emails GET    /users/:user_id/emails/trashbin.:format         {:controller=>"emails", :action=>"trashbin"}
+          destroy_selected_user_emails POST   /users/:user_id/emails/destroy_selected         {:controller=>"emails", :action=>"destroy_selected"}
+formatted_destroy_selected_user_emails POST   /users/:user_id/emails/destroy_selected.:format {:controller=>"emails", :action=>"destroy_selected"}
+                           user_emails GET    /users/:user_id/emails                          {:controller=>"emails", :action=>"index"}
+                 formatted_user_emails GET    /users/:user_id/emails.:format                  {:controller=>"emails", :action=>"index"}
+                                         POST   /users/:user_id/emails                          {:controller=>"emails", :action=>"create"}
+                                         POST   /users/:user_id/emails.:format                  {:controller=>"emails", :action=>"create"}
+                        new_user_email GET    /users/:user_id/emails/new                      {:controller=>"emails", :action=>"new"}
+              formatted_new_user_email GET    /users/:user_id/emails/new.:format              {:controller=>"emails", :action=>"new"}
+                       edit_user_email GET    /users/:user_id/emails/:id/edit                 {:controller=>"emails", :action=>"edit"}
+             formatted_edit_user_email GET    /users/:user_id/emails/:id/edit.:format         {:controller=>"emails", :action=>"edit"}
+                      reply_user_email GET    /users/:user_id/emails/:id/reply                {:controller=>"emails", :action=>"reply"}
+            formatted_reply_user_email GET    /users/:user_id/emails/:id/reply.:format        {:controller=>"emails", :action=>"reply"}
+                            user_email GET    /users/:user_id/emails/:id                      {:controller=>"emails", :action=>"show"}
+                  formatted_user_email GET    /users/:user_id/emails/:id.:format              {:controller=>"emails", :action=>"show"}
+                                         PUT    /users/:user_id/emails/:id                      {:controller=>"emails", :action=>"update"}
+                                         PUT    /users/:user_id/emails/:id.:format              {:controller=>"emails", :action=>"update"}
+                                         DELETE /users/:user_id/emails/:id                      {:controller=>"emails", :action=>"destroy"}
+                                         DELETE /users/:user_id/emails/:id.:format              {:controller=>"emails", :action=>"destroy"}

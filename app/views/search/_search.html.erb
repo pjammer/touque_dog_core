@@ -1,0 +1,6 @@
+<% form_tag search_search_path, :method => :get do %>
+  <fieldset>
+    <%= text_field_tag 'q', params[:q] %>
+    <%= submit_tag 'Search', :name => nil %>
+  </fieldset>
+<% end %>

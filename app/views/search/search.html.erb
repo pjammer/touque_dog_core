@@ -1,0 +1,9 @@
+<h1>Search Results for "<%=h params[:q] %>"</h1>
+
+<%= render :partial => 'search' %>
+<%= @results.inspect %>
+<ul>
+  <% @results.each do |result| %>
+    <%= render :partial => "#{dom_class(result)}", :object => result %>
+  <% end %>
+</ul>

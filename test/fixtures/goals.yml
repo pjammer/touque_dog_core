@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  name: MyString
+  reward: MyString
+  start_time: 2008-04-22 21:19:09
+  end_time: 2008-04-22 21:19:09
+
+two:
+  user_id: 1
+  name: MyString
+  reward: MyString
+  start_time: 2008-04-22 21:19:09
+  end_time: 2008-04-22 21:19:09

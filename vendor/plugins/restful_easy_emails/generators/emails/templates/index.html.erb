@@ -1,0 +1,25 @@
+<h1>RESTful Eazy Messages</h1>
+<div><%= flash[:notice] %></div>
+<div><%= rezm_menu -%></div>
+<p></p>
+<% form_for :email, :url => destroy_selected_profile_emails_path do |form| %>
+  <table border="1">
+    <tr>
+      <th></th>
+      <th>Subject</th>
+      <th><%= rezm_sender_or_receiver_label %></th>
+      <th>Sent</th>
+    </tr>
+  <% for email in @emails  %>
+    <tr>
+      <td><%= rezm_delete_check_box(email) %></td>
+      <td><%= rezm_link_to_email(email) %></td>
+      <td><%= rezm_sender_or_receiver(email) %></td>
+      <td><%= rezm_sent_at(email) %></td>  
+    </tr>
+  <% end %>
+    <tr>
+      <td colspan="4"><%= submit_tag "Delete" %></td>
+    </tr>
+  </table>
+<% end %>

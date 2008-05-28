@@ -1,0 +1,22 @@
+<%=error_messages_for "contact" %> 
+<h1>Contact Us</h1>
+
+<p>Please use this form to contact us if you would like to .... </p>
+
+<ul>
+<li>give us feedback and suggestions</li>
+<li>advertise on the site or sponsor product giveaways</li>
+<li>send us a press release or products to test </li>
+<li> to exchange blog links </li>
+<li>just to say Hi! </li>
+</ul>
+
+<p>We'll get back to you as soon as we can.  - The Team at <%= $SITE_NAME %></p>
+<br />
+ 
+<% form_tag :controller=> "site", :action=>"send_contact_request" do %> 
+  <label>Name </label><p><%= text_field("contact", "name") %></p> <br />
+  <label>Email</label><p><%= text_field("contact", "email_address") %></p> <br />
+  <label>Message</label><p><%= text_area("contact", "message") %></p> <br />
+  <%= submit_tag 'Send' %> 
+<% end %> 

@@ -1,0 +1,39 @@
+<h1>Editing product</h1>
+
+<%= error_messages_for :product %>
+
+<% form_for([:admin, @product]) do |f| %>
+  <p>
+    <b>Company</b><br />
+    <%= f.text_field :company %>
+  </p><p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <b>Parent</b><br />
+    <%= render :partial => "select_prategories"    %>
+    
+  </p>
+  <p>
+    <b>Url</b><br />
+    <%= f.text_area :url %>
+  </p>
+
+  <p>
+    <b>Image</b><br />
+    <%= f.text_field :image %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [:admin, @product] %> |
+<%= link_to 'Back', admin_products_path %>

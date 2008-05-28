@@ -1,0 +1,15 @@
+web_page_1:
+  id: 1
+  parent_id: NULL
+  title: 'Foo'
+  slug: 'foo'
+web_page_2:
+  id: 2
+  parent_id: 1
+  title: 'Bar'
+  slug: 'bar'
+web_page_3:
+  id: 3
+  parent_id: 2
+  title: 'Baz'
+  'slug': 'baz'

@@ -1,0 +1,14 @@
+<% if logged_in? %><li class="first">
+	<%= link_to_unless_current"Home", :controller => "profile", :action => "#{current_user.login}" %></li>
+	<li><%= link_to "Inbox ", profile_emails_path(current_user.login) %></li>
+					<li><%= link_to_unless_current"Logout", logout_path %></li>
+	<% else %><li class="first">
+	<%= link_to_unless_current"Home", root_url %></li>
+			<li><%= link_to_unless_current"Login", login_path %></li>
+			<li><%= link_to_unless_current"Sign Up", signup_path %></li>
+			<% end %>
+			<li><% form_tag search_search_path, :method => :get do %>
+			<%= text_field_tag 'q', params[:q], :style => "width: 50%" %>
+			<%= submit_tag "Search!", :name => nil %>
+			<% end %>
+</li>

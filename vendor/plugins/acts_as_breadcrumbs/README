@@ -1,0 +1,51 @@
+= acts_as_breadcrumbs
+
+This plugin uses an acts_as_tree model and creates a breadcrumbs trail attribute using a base attribute.
+
+== Resources
+
+=== Homepage
+
+* http://actsasflinn.com/some_post_to_come
+
+=== Installation
+
+* script/plugin install svn://rubyforge.org/var/svn/phillyonrails/acts_as_breadcrumbs/trunk
+
+=== Requirements
+
+* acts_as_tree - The model has to acts_as_tree!
+
+== Examples
+
+class WebPage < ActiveRecord::Base
+  acts_as_tree
+  acts_as_breadcrumbs(:attr => :url, :basename => :slug, :separator => "/")
+  acts_as_breadcrumbs(:basename => :title, :separator => "&nbsp;&gt;&nbsp;")
+end
+
+web_page.urls        #=> "foo/bar/baz"
+
+web_page.breadcrumbs #=> "Foo&nbsp;&gt;&nbsp;Bar&nbsp;&gt;&nbsp;Baz"
+
+class Location < ActiveRecord::Base
+  acts_as_tree
+  acts_as_breadcrumbs(:attr => :location_string)
+end
+
+location.location_string #=> "HQ:FL01:RM03"
+
+class Soldier < ActiveRecord::Base
+  acts_as_tree
+  acts_as_breadcrumbs(:attr => :chain_o_command, :separator => " > ")
+end
+
+soldier.chain_o_command #=> "General Hailstone > Colonel Stanley > LTC Mueller"
+
+== License
+
+Released under the MIT license.
+
+== Authors
+
+* Flinn Mueller - http://actsasflinn.com

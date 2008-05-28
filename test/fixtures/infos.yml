@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  age: 1
+  skin_type: MyString
+  makeup_exp: MyString
+  country: MyString
+  hair: MyString
+  eye: MyString
+  skin_tone: MyString
+  birthdate: 2008-02-04
+
+two:
+  user_id: 1
+  age: 1
+  skin_type: MyString
+  makeup_exp: MyString
+  country: MyString
+  hair: MyString
+  eye: MyString
+  skin_tone: MyString
+  birthdate: 2008-02-04

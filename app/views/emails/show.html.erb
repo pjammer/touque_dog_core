@@ -1,0 +1,32 @@
+<h1>RESTful Eazy Messages</h1>
+<div class="" >
+<%= rezm_menu -%>
+  <%= flash[:notice] %> 
+  <p></p>
+  <fieldset>
+    <legend>View Message</legend>
+	
+	  <p>
+        <label for="email_sender_name" ><strong>To:</strong></label>
+        <%= rezm_to_user_link(@email) %>
+      </p>
+      <p>
+        <label for="email_sender_name" ><strong>From:</strong></label>
+        <%= rezm_from_user_link(@email) %>
+      </p>
+    
+      <p>
+        <label for="email_subject" ><strong>Subject:</strong></label>  
+        <%=h @email.subject %>
+      </p>
+      
+      <p>
+        <label for="email_body" ><strong>Message:</strong></label>  
+        <%= simple_format(h(@email.body)) %>
+      </p>
+
+  </fieldset>
+  
+  <%= rezm_button_to_reply(@email) %>
+  <%= rezm_button_to_delete(@email) %>
+</div>

@@ -1,0 +1,9 @@
+<%=
+    collection_select('product','prategory_ids',
+                      @all_prategories,
+                      :id,
+                      :long_name,
+                      {},
+                      {:multiple => true, :size => '10'}
+                     )
+%>

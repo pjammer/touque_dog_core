@@ -1,0 +1,7 @@
+author: topfunky
+summary: Tags to make a doctype.
+homepage: http://nubyonrails.com
+plugin: http://topfunky.net/svn/plugins/meta_tags
+license: MIT
+version: 0.3
+rails_version: 1.0+

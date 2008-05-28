@@ -1,0 +1,23 @@
+%h1 RESTful Easy Messages - haml
+= flash[:notice]
+= rezm_menu
+%p
+%fieldset
+  %legend View Message
+  %p
+    %label{ :for => "email_receiver_name" }
+      %strong To:
+    = rezm_to_user_link(@email)
+  %p
+    %label{ :for => "email_sender_name" }
+      %strong From:
+    = rezm_from_user_link(@email)
+  %p
+    %label{ :for => "email_subject" }
+      %strong Subject:
+    = h @email.subject
+  %p
+    %label{ :for => "email_body" }
+      %strong Message:
+    = simple_format(h(@email.body))
+%span= rezm_button_to_reply(@email) + rezm_button_to_delete(@email)

@@ -1,0 +1,16 @@
+soldier_1:
+  id: 1
+  name: 'President Tancredo'
+  parent_id: NULL
+soldier_2:
+  id: 2
+  name: 'General Hailstone'
+  parent_id: 1
+soldier_3:
+  id: 3
+  name: 'Colonel Stanley'
+  parent_id: 2
+soldier_4:
+  id: 4
+  name: 'LTC Mueller'
+  parent_id: 3

@@ -1,0 +1,16 @@
+node_1:
+  id: 1
+  parent_id: NULL
+  name: 'Root'
+node_2:
+  id: 2
+  parent_id: 1
+  name: 'Level 1'
+node_3:
+  id: 3
+  parent_id: 2
+  name: 'Level 2'
+node_4:
+  id: 4
+  parent_id: NULL
+  name: 'Root 2'

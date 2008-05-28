@@ -1,0 +1,21 @@
+<h1>List of Forum Categories</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for category in @categories %>
+<tr><td><%= h category.position %></td>
+    <td><%= h category.name %></td>
+    <td><%= link_to 'Show', [:admin, category] %></td>
+    <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
+    <td><%= link_to 'Destroy', [:admin, category], 
+      :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<span><%= link_to 'Add a New Category', new_admin_category_path %></span> | <%= link_to 'Create a New Forum', new_admin_forum_path %> </span><br />
+<%= render :partial => "admin/partials/menu" -%>
