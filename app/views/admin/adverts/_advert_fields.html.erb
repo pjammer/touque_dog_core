@@ -1,0 +1,36 @@
+<p>
+   <b>Ad Name</b><br />
+   <%= f.text_field :name %>
+ </p>
+	<p>
+   <b>Ad Size</b><br />
+   <%= f.select :size, (Advert::AD_SIZES) %>
+ </p>  
+<p>
+    <b>Ad Destination - Url</b><br />
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <b>Ad Image</b><br />
+    <%= f.text_field :image %>
+  </p>
+  <p>
+    <b>Local Image (if used)</b><br />
+    <%= f.text_field :imagetwo %>
+  </p>
+	<p>
+    <b>Start Date</b><br />
+    <%= f.date_select :start_date %>
+  </p>
+  <p>
+    <b>End Date</b><br />
+    <%= f.date_select :end_date %>
+  </p>
+  <p>
+    <b>View Limit</b><br />
+    <%= f.text_field :ad_count_limit %>
+  </p>
+  <p>
+    <%= f.submit button_name %>
+  </p>

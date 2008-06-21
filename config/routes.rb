@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :prategories
   map.resources :profiles, :path_prefix => "profile/:login" do |profile|
     profile.resources :photos, :member => { :select => :post, :deselect => :post }, :path_prefix => "profile/:login" 
-    profile.resources :stickies, :path_prefix => "profile/:login"
+    profile.resources :notes, :path_prefix => "profile/:login"
     profile.resources :emails, :path_prefix => "profile/:login",
                         :collection => {:destroy_selected => :post,
                                         :inbox            => :get,
@@ -33,6 +33,9 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :products
     admin.resources :adverts
     admin.resources :prategories
+    admin.resources :users, :member => { :suspend   => :put,
+                                       :unsuspend => :put,
+                                       :purge     => :delete }
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -42,9 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  map.resources :users, :member => { :suspend   => :put,
-                                     :unsuspend => :put,
-                                     :purge     => :delete }
+  map.resources :users
   map.resource :session
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login '/login', :controller => 'sessions', :action => 'new'

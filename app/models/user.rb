@@ -1,6 +1,6 @@
 require 'digest/sha1'
 class User < ActiveRecord::Base
-  has_many :stickie
+  has_many :notes
   has_many :goals
   has_one :glog
   has_one :info

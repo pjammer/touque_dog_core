@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
   def index
-    @title = "A supportive community dedicated to losing weight."
+    @title = $TITLE_SITE
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

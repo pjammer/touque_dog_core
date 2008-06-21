@@ -15,7 +15,7 @@
 <body>
 	<div id="header">
 		<h1> <%= link_to "#{$SITE_NAME}", root_url %></h1>
-		<h2>Learn, Talk and have Fun with Makeup!</h2>
+		<h2><%= $TAG_LINE %></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -38,10 +38,8 @@
 <div id='clear'></div>
 <div id="footer">
 <!-- Start of Footer Code -->
-<p>
-<%= link_to "About Us", :controller => 'site', :action =>'about' %> | 
-&#169; <%= $PARENTCOMPANY %> |
-<%= link_to "Contact Us", :controller => 'site', :action =>'contact' %> 
+<p> 
+&#169; <%= $PARENTCOMPANY %> 
 </p>
 	
 </div>

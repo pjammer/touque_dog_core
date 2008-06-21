@@ -10,7 +10,9 @@
     <% form_for :email, :url => profile_emails_path do |form| %>
       <p>
         <label for="email_recepient" >Recipient:</label><br />
-        <%= form.text_field :recipient, :size => 40, :value => @email.recipient %>
+
+		<%= text_field_with_auto_complete :user, :login %>
+
       </p>
     
       <p>

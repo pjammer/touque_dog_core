@@ -11,8 +11,8 @@
 
   <h1 class="comments">Stickies</h1><br />
   	<!-- #1 -->
-  	<% unless @user.stickie.empty? %> 
-        <% @user.stickie.each do |comment| %>
+  	<% unless @user.notes.empty? %> 
+        <% @user.notes.each do |comment| %>
   	    <p><%= h comment.body %><br /><small>Posted on <%= h comment.created_at %> by <%=h comment.user.login  %></small>
   	    </p>
   	  <% end %>
@@ -24,12 +24,15 @@
   </div>
   <div id='show_it' style="display:none;">
   <% if logged_in? %>
-  <%= render :partial => @stickie = @user.stickie.new, 
+  <%= render :partial => @note = Note.new, 
      :locals => { :button_name => 'Create'}%><br />
-<%= render :partial => "contact_box" %>
+
   <% else %>
   <p> You aren't a friend of this person.  How did you even get here?</p>
   <% end %>
   </div>
+<% end %>
+<% if logged_in? %>
+<%= render :partial => "contact_box" %>
 <% end %>
 </div>

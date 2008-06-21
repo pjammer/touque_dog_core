@@ -2,19 +2,20 @@
 
 <table>
   <tr>
-    <th>Url</th>
-    <th>Image</th>
-    <th>Image Two</th>
+	<th>Name</th>
+	<th>Ad Size</th>
+	<th>Ad Count</th>
+	<th>Ad Limit</th>
+	<th>Functions</th>
   </tr>
 
 <% for advert in @adverts %>
   <tr>
-    <td><%=h advert.url %></td>
-    <td><%=h advert.image %></td>
-    <td><%=h advert.imagetwo %></td>
-    <td><%= link_to 'Show',[:admin, advert] %></td>
-    <td><%= link_to 'Edit', edit_admin_advert_path(advert) %></td>
-    <td><%= link_to 'Destroy', [:admin, advert], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to advert.name, edit_admin_advert_path(advert) %></td>
+	<td><%=h advert.size %></td>
+	<td><%=h advert.ad_count %></td>
+	<td><%=h advert.ad_count_limit %></td>
+    <td><%= link_to 'Delete?', [:admin, advert], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

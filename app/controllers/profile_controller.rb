@@ -12,7 +12,6 @@ class ProfileController < ApplicationController
       flash[:notice] = "No user by the name of #{screen_name} exists in the #{$SITE_NAME} community."
       redirect_to :action => "index"
     end
-    @stickie = @user.stickie
   end
   
   def attachment

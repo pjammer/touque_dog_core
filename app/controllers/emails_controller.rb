@@ -4,7 +4,7 @@ class EmailsController < ApplicationController
   
   # Restful_authentication Filter
   before_filter :rezm_login_required
-
+  auto_complete_for :user, :login
   # GET /emails
   def index
     redirect_to inbox_profile_emails_url

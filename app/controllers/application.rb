@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   $TAG_LINE = "your tagline here!"
   $PICTURE_NAME = "Avatar"
   $PRIVACY_EMAIL = "privacy at yourwebsite dot com"
+  $TITLE_SITE = "Your Website's Title description here"
   protected
   def authenticate
     authenticate_or_request_with_http_basic do |name, pass|

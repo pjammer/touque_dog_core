@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 57) do
+ActiveRecord::Schema.define(:version => 60) do
 
   create_table "adverts", :force => true do |t|
     t.string   "url"
@@ -17,6 +17,12 @@ ActiveRecord::Schema.define(:version => 57) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "imagetwo"
+    t.string   "name"
+    t.string   "size"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "ad_count"
+    t.integer  "ad_count_limit"
   end
 
   create_table "blogs", :force => true do |t|
@@ -122,21 +128,16 @@ ActiveRecord::Schema.define(:version => 57) do
   end
 
   create_table "messages", :force => true do |t|
-    t.boolean  "receiver_deleted"
-    t.boolean  "receiver_purged"
-    t.boolean  "sender_deleted"
-    t.boolean  "sender_purged"
-    t.datetime "read_at"
-    t.integer  "receiver_id"
-    t.integer  "sender_id"
-    t.string   "subject",          :default => "", :null => false
-    t.text     "body"
+    t.string   "type"
+    t.integer  "forum_id"
+    t.integer  "user_id"
+    t.integer  "topic_id"
+    t.string   "title"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "updated_by"
   end
-
-  add_index "messages", ["sender_id"], :name => "index_messages_on_sender_id"
-  add_index "messages", ["receiver_id"], :name => "index_messages_on_receiver_id"
 
   create_table "mugshots", :force => true do |t|
     t.integer  "parent_id"
@@ -150,6 +151,13 @@ ActiveRecord::Schema.define(:version => 57) do
     t.datetime "updated_at"
     t.boolean  "avatar",       :default => false
     t.integer  "user_id"
+  end
+
+  create_table "notes", :force => true do |t|
+    t.string   "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "photos", :force => true do |t|
@@ -327,6 +335,7 @@ ActiveRecord::Schema.define(:version => 57) do
     t.integer  "messages_count",                          :default => 0
     t.string   "time_zone",                               :default => "Etc/UTC"
     t.string   "avatar"
+    t.string   "password_reset_code",       :limit => 40
   end
 
 end

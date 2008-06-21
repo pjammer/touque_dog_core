@@ -1,0 +1,22 @@
+<h1>Activated Users Section - <%= pluralize(@users.size, "Users") %></h1>
+
+<table>
+  <tr>
+    <th>User Login ID</th>
+    <th>Created Date</th>
+    <th>Email Address</th>
+	<th colspan='2'>Functions</th>
+  </tr>
+
+<% for user in @users %>
+  <tr>
+    <td><%= link_to "#{user.login}", :controller => 'profile', :action => "#{user.login}" %></td>
+    <td><%=h user.created_at.strftime("%m/%d/%Y") %></td>
+    <td><%= user.email %></td>
+    <td> 
+	 <%= link_to 'Suspend', suspend_admin_user_path(user.login), :confirm  => 'Are you sure?', :method => :suspend %>
+</td>
+    <td><%= link_to 'Destroy', [:admin, user], :confirm => 'Are you sure?', :method => :destroy %></td>
+  </tr>
+<% end %>
+</table>

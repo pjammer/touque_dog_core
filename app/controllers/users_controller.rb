@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  before_filter :can_edit, :only => [:edit, :update, :destroy, :confirm_delete]
-  before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge]
   # render new.rhtml
   def new
   end
@@ -27,36 +25,10 @@ class UsersController < ApplicationController
       flash[:notice] = "Signup complete!"
     end
     flash[:notice] = "Signup Complete"
-    @info = Info.find_by_user_id(current_user)
+    #@info = Info.find_by_user_id(current_user)
     redirect_back_or_default('/')
   end
-  # PUT /users/1/suspend
-  def suspend
-    @user = User.find(params[:id])
-    @user.suspend! 
-    redirect_to(users_url)
-  end
-
-  # PUT /users/1/unsuspend
-  def unsuspend
-    @user = User.find(params[:id]) 
-    @user.unsuspend! 
-    redirect_to(users_url)
-  end
-
-  # DELETE /users/1
-  def destroy
-    @user = User.find(params[:id])
-    @user.delete!
-    redirect_to(users_url)
-  end
-
-  # DELETE /users/1/purge
-  def purge
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to(users_url)
-  end
+ 
    # action to perform when the user wants to change their password
     def change_password
     return unless request.post?
@@ -108,7 +80,6 @@ class UsersController < ApplicationController
     flash[:alert] = "Password mismatch"
     end
     end
-
 
   protected
     def find_user

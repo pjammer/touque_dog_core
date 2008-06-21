@@ -3,24 +3,8 @@
 <%= error_messages_for :advert %>
 
 <% form_for([:admin, @advert]) do |f| %>
-  <p>
-    <b>Url</b><br />
-    <%= f.text_field :url %>
-  </p>
+<%= render :partial => 'advert_fields', :locals => {:f => f, :button_name => "Create"} %>
 
-  <p>
-    <b>Image</b><br />
-    <%= f.text_field :image %>
-  </p>
-
-  <p>
-    <b>Image</b><br />
-    <%= f.text_field :imagetwo %>
-  </p>
-  
-  <p>
-    <%= f.submit "Create" %>
-  </p>
 <% end %>
 
 <%= link_to 'Back', admin_adverts_path %>
