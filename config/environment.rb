@@ -71,10 +71,10 @@ c = YAML::load(File.open("#{RAILS_ROOT}/config/config.yml"))
    } 
    CONTACT_RECIPIENT = c[RAILS_ENV]['email']['contact_recipient'] 
    ActionMailer::Base.smtp_settings = {
-   :address => "mail.ingraminternet.com",
+   :address => "mail.example.com",
    :port => 25, 
-   :domain => 'www.prettybycritty.com',
-   :user_name => "noreply",
-   :password => "1q2w1q2w",
+   :domain => 'www.example.com',
+   :user_name => "something",
+   :password => "password",
    :authentication => :login,
    }
