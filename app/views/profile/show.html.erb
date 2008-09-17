@@ -13,7 +13,7 @@
   	<!-- #1 -->
   	<% unless @user.notes.empty? %> 
         <% @user.notes.each do |comment| %>
-  	    <p><%= h comment.body %><br /><small>Posted on <%= h comment.created_at %> by <%=h comment.user.login  %></small>
+  	    <p><%= h comment.body %><br /><small>Posted on <%= h comment.created_at %> by <%=h user_name(comment.created_by)  %></small>
   	    </p>
   	  <% end %>
   	<% end %>

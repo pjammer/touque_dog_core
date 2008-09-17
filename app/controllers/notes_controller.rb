@@ -23,8 +23,8 @@ before_filter :load_user
   end
 
   def new
-    @note = @user.note.build
-    @user.notes.user_id = current_user.id
+    @note = @user.notes.build
+    @note.created_by = current_user.id
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @comment }
@@ -36,7 +36,7 @@ before_filter :load_user
   def create
 
     @note = @user.notes.new(params[:note])
-    @note.user_id = current_user.id
+    @note.created_by = current_user.id
     respond_to do |format|
       if @note.save
         flash[:notice] = 'You have posted successfully.'

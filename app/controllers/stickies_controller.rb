@@ -23,7 +23,7 @@ class StickiesController < ApplicationController
   end
 
   def new
-    @stickie = @user.stickies.build
+    @stickie = @user.stickie.build
     @user.stickie.user_id = current_user.id
 
     respond_to do |format|

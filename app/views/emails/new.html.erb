@@ -11,7 +11,7 @@
       <p>
         <label for="email_recepient" >Recipient:</label><br />
 
-		<%= text_field_with_auto_complete :user, :login %>
+		<%= form.text_field :recipient, :size => 40, :value => @email.recipient %>
 
       </p>
     

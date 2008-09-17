@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 61) do
+ActiveRecord::Schema.define(:version => 62) do
 
   create_table "accounts", :force => true do |t|
     t.string   "username"
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(:version => 61) do
     t.datetime "updated_at"
   end
 
-  add_index "emails", ["sender_id"], :name => "index_emails_on_sender_id"
   add_index "emails", ["receiver_id"], :name => "index_emails_on_receiver_id"
+  add_index "emails", ["sender_id"], :name => "index_emails_on_sender_id"
 
   create_table "fforum_posts", :force => true do |t|
     t.datetime "modified_at"
@@ -90,8 +90,8 @@ ActiveRecord::Schema.define(:version => 61) do
     t.integer  "position",       :default => 0
   end
 
-  add_index "forums", ["category_id"], :name => "index_forums_on_category_id"
   add_index "forums", ["category_id"], :name => "index_forums_on_last_post_at"
+  add_index "forums", ["category_id"], :name => "index_forums_on_category_id"
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id",     :null => false
@@ -165,6 +165,7 @@ ActiveRecord::Schema.define(:version => 61) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "created_by"
   end
 
   create_table "photos", :force => true do |t|
@@ -203,8 +204,8 @@ ActiveRecord::Schema.define(:version => 61) do
     t.integer "product_id",   :null => false
   end
 
-  add_index "prategories_products", ["product_id", "prategory_id"], :name => "index_prategories_products_on_product_id_and_prategory_id"
   add_index "prategories_products", ["prategory_id"], :name => "index_prategories_products_on_prategory_id"
+  add_index "prategories_products", ["product_id", "prategory_id"], :name => "index_prategories_products_on_product_id_and_prategory_id"
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -259,8 +260,8 @@ ActiveRecord::Schema.define(:version => 61) do
     t.datetime "updated_at"
   end
 
-  add_index "reviewables", ["review_id"], :name => "index_reviewables_on_review_id"
   add_index "reviewables", ["reviewable_id", "reviewable_type"], :name => "index_reviewables_on_reviewable_id_and_reviewable_type"
+  add_index "reviewables", ["review_id"], :name => "index_reviewables_on_review_id"
 
   create_table "reviews", :force => true do |t|
     t.string   "title"
@@ -292,6 +293,7 @@ ActiveRecord::Schema.define(:version => 61) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "created_by"
   end
 
   create_table "taggings", :force => true do |t|
@@ -301,8 +303,8 @@ ActiveRecord::Schema.define(:version => 61) do
     t.datetime "created_at"
   end
 
-  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
   add_index "taggings", ["taggable_id", "taggable_type"], :name => "index_taggings_on_taggable_id_and_taggable_type"
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
 
   create_table "tags", :force => true do |t|
     t.string "name"
@@ -324,8 +326,8 @@ ActiveRecord::Schema.define(:version => 61) do
     t.integer  "forum_id"
   end
 
-  add_index "topics", ["forum_id"], :name => "index_topics_on_forum_id"
   add_index "topics", ["forum_id", "last_post_at"], :name => "index_topics_on_last_post_at"
+  add_index "topics", ["forum_id"], :name => "index_topics_on_forum_id"
 
   create_table "users", :force => true do |t|
     t.string   "login"

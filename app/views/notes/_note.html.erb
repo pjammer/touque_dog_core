@@ -1,7 +1,5 @@
 <% form_for([@user, @note], :url => profile_notes_path(@user.login)) do |f| %>
-<%= @user.notes.id.inspect %>, <%= current_user.id %>, <%= @user.id %>  
-<p>
-	
+  <p>
     <b>What is it that you want to say?</b><br />
     <%= f.text_area :body, :style => 'height: 150px; width: 150px;'%>
   </p>
