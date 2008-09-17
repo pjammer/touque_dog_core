@@ -3,6 +3,8 @@
 
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
+  include AccountLocation
+
   helper :all # include all helpers, all the time
   helper_method :current_user, :logged_in?, :is_online?, :admin?, :can_edit?, :rating
 
@@ -10,6 +12,7 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '152798e224e168cae5de803e860f2d75'
   around_filter :set_timezone
+    before_filter :find_account
   # Return true if a parameter corresponding to the given symbol was posted.
   def param_posted?(sym)
     request.post? and params[sym]
@@ -30,5 +33,8 @@ class ApplicationController < ActionController::Base
     TzTime.zone =  logged_in? ? current_user.tz :  TZInfo::Timezone.get('America/New_York')
     yield
     TzTime.reset!
+  end
+  def find_account
+    @account = Account.find_by_username(account_subdomain)
   end
 end

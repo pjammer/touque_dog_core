@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 60) do
+ActiveRecord::Schema.define(:version => 61) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "adverts", :force => true do |t|
     t.string   "url"
@@ -49,16 +55,17 @@ ActiveRecord::Schema.define(:version => 60) do
   end
 
   create_table "emails", :force => true do |t|
-    t.integer  "sender_id",                        :null => false
-    t.integer  "receiver_id",                      :null => false
+    t.boolean  "receiver_deleted"
+    t.boolean  "receiver_purged"
+    t.boolean  "sender_deleted"
+    t.boolean  "sender_purged"
+    t.datetime "read_at"
+    t.integer  "receiver_id"
+    t.integer  "sender_id"
     t.string   "subject",          :default => "", :null => false
     t.text     "body"
     t.datetime "created_at"
-    t.datetime "read_at"
-    t.boolean  "sender_deleted"
-    t.boolean  "receiver_deleted"
-    t.boolean  "sender_purged"
-    t.boolean  "receiver_purged"
+    t.datetime "updated_at"
   end
 
   add_index "emails", ["sender_id"], :name => "index_emails_on_sender_id"
@@ -335,7 +342,6 @@ ActiveRecord::Schema.define(:version => 60) do
     t.integer  "messages_count",                          :default => 0
     t.string   "time_zone",                               :default => "Etc/UTC"
     t.string   "avatar"
-    t.string   "password_reset_code",       :limit => 40
   end
 
 end

@@ -36,9 +36,9 @@ class StickiesController < ApplicationController
   # POST /comments.xml
   def create
     @stickie = @user.stickie.new(params[:stickie])
-    @stickie.user_id << current_user.id
+    @stickie.user_id = current_user.id
     respond_to do |format|
-      if @user.stickie << @stickie
+      if @stickie.save
         flash[:notice] = 'You have posted successfully.'
         format.html { redirect_to(:controller => 'profile', :action => 'show', :login => @user.login) }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
