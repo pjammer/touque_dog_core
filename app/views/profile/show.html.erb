@@ -1,19 +1,18 @@
 <div id="ltcolumn">
 <h1>Home of <%= @user.login %> </h1>
 <div id='profile_menu'><%= render :partial => "menu" %></div>
-
+<!-- Change content here to customize user profile page-->
 <p>User content here.</p>
+<!-- End changes here -->
 </div>
 <div id="rtcolumn">
 <div><%= avatar_for(@user) %></div><br />
-<% if me_or_friend? %>
-
-
+<% unless me_or_friend? %>
   <h1 class="comments">Stickies</h1><br />
   	<!-- #1 -->
   	<% unless @user.notes.empty? %> 
         <% @user.notes.each do |comment| %>
-  	    <p><%= h comment.body %><br /><small>Posted on <%= h comment.created_at %> by <%=h user_name(comment.created_by)  %></small>
+  	    <p><%= h comment.body %><br /><small>Posted <%= distance_of_time_in_words(Time.now, comment.created_at) %> ago by <%=h user_name(comment.created_by) %></small>
   	    </p>
   	  <% end %>
   	<% end %>

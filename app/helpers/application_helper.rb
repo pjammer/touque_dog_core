@@ -139,15 +139,12 @@ include AdvertsHelper
   def time_stamp(time)
     time.to_datetime.strftime("%a, %d %b %Y, %l:%M%P").squeeze(' ')  
   end
-  #Allows only current user or a friend of current user to view the page.
-  def me_or_friend?
-    if logged_in?
-    current_user.is_friends_with? @user or @user == current_user
-    else
-    
-    flash[:notice] = "You Aren't allowed to view that page.s"
+    #Allows only current user or a friend of current user to view the page.
+    def me_or_friend?
+     unless current_user.is_friends_with? @user or @user == current_user
+      flash[:notice] = "You aren't allowed to view that page."
+    end
   end
-end
 #a helper used in the menu of your site, to distinguish between a logged in user and a guest.  Navigate them to where you want, DRY.
 def nav_link(linkname1, logged_in_path, linkname2, nonlogged_path)
   if logged_in?
