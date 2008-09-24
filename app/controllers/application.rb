@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '152798e224e168cae5de803e860f2d75'
   around_filter :set_timezone
-    before_filter :find_account
+
   # Return true if a parameter corresponding to the given symbol was posted.
   def param_posted?(sym)
     request.post? and params[sym]
@@ -34,7 +34,5 @@ class ApplicationController < ActionController::Base
     yield
     TzTime.reset!
   end
-  def find_account
-    @account = Account.find_by_username(account_subdomain)
-  end
+
 end

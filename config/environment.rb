@@ -60,21 +60,11 @@ Rails::Initializer.run do |config|
   config.active_record.observers = :user_observer
   
 end
-c = YAML::load(File.open("#{RAILS_ROOT}/config/config.yml")) 
-   ActionMailer::Base.smtp_settings = { 
-     :address  => c[RAILS_ENV]['email']['server'], 
-     :port  => c[RAILS_ENV]['email']['port'],  
-     :domain  => c[RAILS_ENV]['email']['domain'], 
-     :authentication => c[RAILS_ENV]['email']['authentication'], 
-     :user_name => c[RAILS_ENV]['email']['username'], 
-     :password => c[RAILS_ENV]['email']['password'] 
-   } 
-   CONTACT_RECIPIENT = c[RAILS_ENV]['email']['contact_recipient'] 
-   ActionMailer::Base.smtp_settings = {
+ActionMailer::Base.smtp_settings = {
    :address => "mail.example.com",
    :port => 25, 
    :domain => 'www.example.com',
    :user_name => "something",
    :password => "password",
    :authentication => :login,
-   }
+}
