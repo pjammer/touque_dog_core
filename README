@@ -12,19 +12,41 @@ Extendible to any number of configurations with Touque Dog plugins
 
 Where to find Touque Dog plugins:
 ---------------------------------
+Coming soon to http://www.touquedog.com 
 
 How to use Touque Dog in Development mode:
 ------------------------------------------
-1. Download Touque Dog core from XXXX.
+1. Download Touque Dog core from github.
 2. Change the default variables to match your site's name, etc.
 3. Edit the mail settings for your Web Host, so you can send user authentication emails
 3. Change the stylesheet to match your colour scheme.
 4. Download plugins to give your user's something to do.
 
-Touque Dog Core License 
----------
-You are allowed to modify the source code of Touque_dog_core, Touque dog core, or any other spelling of this product, except when the modifying of the code is for the reselling of plugins, free or otherwise, the selling of support (free or otherwise) of any kind, and support contracts (free or otherwise) of any kind.
+Copy Cat Application or Service License 
+---------------------------------------
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software (the "Software"), to modify the source code of Touque_dog_core, Touque dog core, or any other spelling of this product, except when the code modification(s) is/are for the purpose of:
+a) reselling plugins for the modified code.  
+b) selling support, and support contracts (free or otherwise).
 
 The selling of plugins, for free or for any generally recognized currency of any sort, is limited to an authorized plugin reseller, as deemed authorized by Ingram Internet Enterprises. 
 
-So yes you can modify the code, as long as you aren't modifying the code for resale (free or for any generally accepted currency), to create another base code for the resale (free or for any generally accepted currency) of plugins, or to offer end user support.  You have many options instead: Join the development team to make this code stronger;  Create plugins to possibly make money;  Become an authorized support agent for this product instead.  Together, we can all win.
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Loose Interpretation of the License:
+------------------------------------
+Yes you can modify the code and add your own plugins for your own app's use.  You can do anything to this code you want, as long as you aren't modifying the code for resale (free or for any generally accepted currency), to create another base code for the purpose of reselling (free or for any generally accepted currency) of plugins, or modifying the code to offer any kind of end user support.  
+
+You have many other options instead: 
+Join the development team to make this code stronger;  Create plugins to possibly make money;  Become an authorized support agent for this product instead.  
+
+Together, we can all win.
