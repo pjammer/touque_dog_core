@@ -1,9 +1,0 @@
-<%=
-    collection_select('prategory',
-                      'parent_id',
-                      @all_prategories,
-                      :id,
-                      :long_name,
-                      { :include_blank => true }
-                     )
-%>
