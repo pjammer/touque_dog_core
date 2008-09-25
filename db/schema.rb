@@ -12,8 +12,8 @@
 ActiveRecord::Schema.define(:version => 60) do
 
   create_table "adverts", :force => true do |t|
-    t.string   "url"
-    t.string   "image"
+    t.string   "url",            :default => "http://www.touquedog.com"
+    t.string   "image",          :default => "/images/rails.png"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "imagetwo"

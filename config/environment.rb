@@ -60,11 +60,14 @@ Rails::Initializer.run do |config|
   config.active_record.observers = :user_observer
   
 end
+#Substitute your email settings for the example settings below.
+#user_name, password may NOT be used by your web host provider.  Delete these settings if errors occur.
+#Port 25 is standard and probably doesn't need to be changed. However, your webhost may ask for you to change.
 ActionMailer::Base.smtp_settings = {
    :address => "mail.example.com",
    :port => 25, 
    :domain => 'www.example.com',
-   :user_name => "something",
+   :user_name => "someone",
    :password => "password",
    :authentication => :login,
 }

@@ -1,8 +1,8 @@
 class CreateAdverts < ActiveRecord::Migration
   def self.up
     create_table :adverts do |t|
-      t.string :url
-      t.string :image
+      t.string :url, :default => "http://www.touquedog.com"
+      t.string :image, :default => "/images/rails.png"
 
       t.timestamps
     end
