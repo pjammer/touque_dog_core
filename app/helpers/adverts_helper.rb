@@ -1,5 +1,5 @@
 module AdvertsHelper
-  # change RANDOM to RAND if using mysql.
+  # if using mysql, in line 4 change 'RANDOM()' to 'RAND()'
   def ad_link
     @advert = Advert.find(:first, :order => 'RANDOM()')
     unless @advert.blank?

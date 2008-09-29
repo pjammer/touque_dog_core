@@ -12,17 +12,17 @@
 ActiveRecord::Schema.define(:version => 60) do
 
   create_table "adverts", :force => true do |t|
-    t.string   "url",            :default => "http://www.touquedog.com"
-    t.string   "image",          :default => "/images/rails.png"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "imagetwo"
+    t.string   "url"
+    t.string   "image"
     t.string   "name"
     t.string   "size"
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "ad_count"
     t.integer  "ad_count_limit"
+    t.string   "imagetwo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "emails", :force => true do |t|
