@@ -3,6 +3,7 @@ class SearchController < ApplicationController
   end
   
   def search
-    @results = ActsAsFerret.find(params[:q], 'comeonworkjerk')
+    per_page = 10
+    @results = ActsAsFerret.find(params[:q], 'tdcoredex', :page => params[:page], :per_page => per_page)
   end
 end

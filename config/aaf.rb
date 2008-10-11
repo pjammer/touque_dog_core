@@ -1,4 +1,4 @@
-ActsAsFerret::define_index('comeonworkjerk',
+ActsAsFerret::define_index('tdcoredex',
  :models => {
    User  => {:fields => [:login]},
  },
